@@ -1,4 +1,3 @@
-import { Link, Outlet } from "react-router-dom";
 import styles from "./styles/app.module.css";
 
 type AppProps = {
@@ -11,18 +10,16 @@ export default function App({ title = "SkillSwap" }: AppProps) {
       <header className={styles.header}>
         <h1 className={styles.headerTitle}>{title}</h1>
         <nav className={styles.nav} aria-label="main navigation">
-          <Link to="/" className={styles.navLink}>
+          <a href="#" className={styles.navLink}>
             Home
-          </Link>
-          <Link to="/profile" className={styles.navLink}>
+          </a>
+          <a href="#" className={styles.navLink}>
             Profile
-          </Link>
+          </a>
         </nav>
       </header>
 
-      <main className={styles.main}>
-        <Outlet />
-      </main>
+      <main className={styles.main}></main>
 
       <footer className={styles.footer}>
         <span>© {new Date().getFullYear()} SkillSwap</span>
